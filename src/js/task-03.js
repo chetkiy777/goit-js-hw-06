@@ -15,33 +15,24 @@ const images = [
 
 const galleryContainer = document.querySelector('.gallery')
 
+const markup = images.map(image => {
+  return `<li class="img-item"><img src=${image.url} alt=${image.alt}></li>`
+})
 
-const makeGallery = (imagesArr) => {
-    imagesArr.map(({ url, alt }) => {
-      const liItem = document.createElement('li')
-      liItem.classList.add('img-item')
-      liItem.innerHTML = `<img src="${url}" alt="${alt}">`
-      galleryContainer.insertAdjacentElement('afterbegin', liItem)
-    })
-  }
-  // return galleryContainer.insertAdjacentHTML('afterbegin', itemList)
+galleryContainer.insertAdjacentHTML('afterbegin', markup)
 
 
-makeGallery(images);
+// const makeGallery = (imagesArr) => {
+//     imagesArr.map(({ url, alt }) => {
+//       const liItem = document.createElement('li')
+//       liItem.classList.add('img-item')
+//       liItem.innerHTML = `<img src="${url}" alt="${alt}">`
+//       galleryContainer.insertAdjacentElement('afterbegin', liItem)
+//     })
+//   }
 
 
-// const makeListElem = ({ url, alt }) => {
-//     const listItem = document.createElement('li')
-//     listItem.innerHTML = `<img src="${url}" alt="${alt}">`
-//     return listItem;
-// }
-
-// let elems = images.map(img => makeListElem(img))
-
-// for (let elem of elems) {
-//   galleryContainer.insertAdjacentElement('afterbegin', elem)
-// }
-
+// makeGallery(images);
 
 
 

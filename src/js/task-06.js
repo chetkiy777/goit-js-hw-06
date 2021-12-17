@@ -17,5 +17,8 @@ const addInvalid = () => {
 
 
 input.addEventListener('blur', () => {
-   input.value.split('').length == input.getAttribute('data-length') ? addValid() : addInvalid()
+   input.value.length == input.getAttribute('data-length') ? addValid() : addInvalid()
  })
+
+
+ 

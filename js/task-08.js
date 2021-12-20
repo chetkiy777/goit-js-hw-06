@@ -13,7 +13,9 @@ form.addEventListener('submit', (e) => {
     }
 
     if (profile.email === '' || profile.password === '') {
-       return alert('error')
+        alert('error')
+        form.reset()  
+        return
     }
 
     console.log(profile)

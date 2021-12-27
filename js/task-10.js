@@ -17,7 +17,8 @@ const createBoxes = () => {
     div.classList.add('box')
     div.style.background = getRandomHexColor()
     div.style.height = `${30 + i * 10}` + 'px'
-    div.style.width = `${30 + i * 10}` + 'px'
+    div.style.width = div.style.height
+    // div.style.width = `${30 + i * 10}` + 'px'
     
     boxesContainer.append(div)
     console.log(div)
